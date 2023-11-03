@@ -36,21 +36,25 @@ Live Flock is an educational project aimed at honing our skills in web developme
 ### Installation
 
 1. Clone the repository:
+   
    ```shell
    git clone https://github.com/your-username/live-flock.git
    cd live-flock
-2. Set up Docker containers:
+   
+3. Set up Docker containers:
+   
    ```shell
    docker-compose up
-3. Run the frontend and backend development servers.
-4. Access the application at:
+   
+5. Run the frontend and backend development servers.
+6. Access the application at:
+   
    ```shell
    http://localhost:3000 #for the frontend
    ```
-   and:
+
    ```shell
    http://localhost:8080 #for the API.
-   ```
 
 ## Authors
 
