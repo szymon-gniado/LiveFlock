@@ -6,12 +6,11 @@ Live Flock is an educational project aimed at honing our skills in web developme
 
 ### Features
 
-- **Social Media**: Create and share your thoughts, connect with friends, and follow interesting accounts.
-- **Live Streaming**: Broadcast your content in real-time and engage with your audience.
-- **User Authentication**: Secure user registration and login system.
-- **Real-time Interaction**: Interact with users through chat and comments.
-- **Customization**: Personalize your profile, follow your interests, and discover new content.
-- **Database Management**: Use MariaDB or PostgreSQL to manage user data, tweets, streaming sessions, and more.
+- ~~**Social Media**: Create and share your thoughts, connect with friends, and follow interesting accounts.~~ **(WiP)**
+- ~~**Live Streaming**: Broadcast your content in real-time and engage with your audience.~~ **(WiP)**
+- ~~**User Authentication**: Secure user registration and login system.~~ **(WiP)**
+- ~~**Real-time Interaction**: Interact with users through chat and comments.~~ **(WiP)**
+- ~~**Customization**: Personalize your profile, follow your interests, and discover new content.~~ **(WiP)**
 
 ### Learning Objectives
 
