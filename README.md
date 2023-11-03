@@ -23,7 +23,7 @@ Live Flock is an educational project aimed at honing our skills in web developme
 - **Next.js**: Explore Next.js, a framework for React that enables server-side rendering.
 - **JavaScript**: Develop skills in JavaScript, the programming language that powers web development.
 - **Java**: Gain proficiency in Java, a versatile programming language used in backend development.
-- **MVC Architecture**: Develop the project with a well-structured Model-View-Controller (MVC) design pattern for clean separation of concerns.
+- **MVC**: Develop the project with a well-structured Model-View-Controller (MVC) design pattern for clean separation of concerns.
 
 ## Getting Started
 
