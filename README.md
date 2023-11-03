@@ -18,13 +18,12 @@ Live Flock is an educational project aimed at honing our skills in web developme
 - **Web Development**: Build the frontend using Next.js, a React framework, and the backend using Java and the Spring framework.
 - **Containerization**: Gain hands-on experience with Docker, containerization, and orchestration to ensure smooth deployment and scaling.
 - **RESTful API**: Create a robust RESTful API for communication between the frontend and backend components.
-- **Database Management**: Learn how to set up, configure, and manage a relational database (MariaDB).
+- **Database Management**: Learn how to set up, configure, and manage a relational database (MariaDB or PostgreSQL).
 - **React**: Learn React, a popular library for building user interfaces.
 - **Spring**: Master the Spring framework, a key tool for creating Java-based web applications.
 - **Next.js**: Explore Next.js, a framework for React that enables server-side rendering.
 - **JavaScript**: Develop skills in JavaScript, the programming language that powers web development.
 - **Java**: Gain proficiency in Java, a versatile programming language used in backend development.
-- **MariaDB**: Understand MariaDB, a relational database management system for storing application data.
 - **MVC Architecture**: Develop the project with a well-structured Model-View-Controller (MVC) design pattern for clean separation of concerns.
 
 ## Getting Started
