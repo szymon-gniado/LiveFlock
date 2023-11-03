@@ -1,4 +1,4 @@
-# Live Flock
+# Live Flock (work in progreess)
 
 Live Flock is an educational project aimed at honing our skills in web development using Next.js, implementing RESTful APIs with Spring and connecting it with relational database. In this project, we create a social media and streaming platform, similar to Twitter with streaming functionality reminiscent of Twitch.
 
