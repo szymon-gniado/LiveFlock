@@ -60,10 +60,10 @@ Live Flock is an educational project aimed at honing our skills in web developme
 
 This project was developed and is maintained by the following contributors:
 
-- [Szymon Gniado](https://github.com/szymon-gnado) & [Karol Muziński](https://github.com/contributor1-username) - Project Lead
-- [Karol Muziński](https://github.com/contributor1-username) - Frontend Developer
+- [Szymon Gniado](https://github.com/szymon-gnado) & [Karol Muziński](https://github.com/ViniestPlane76) - Project Lead
+- [Karol Muziński](https://github.com/ViniestPlane76) - Frontend Developer
 - [Szymon Gniado](https://github.com/szymon-gnado) - Backend Developer
-- [Szymon Gniado](https://github.com/szymon-gnado) - Database Administrator
+- [Szymon Gniado](https://github.com/szymon-gnado)- Database Administrator
 
 We would like to thank all the individuals who have contributed to this project.
 
