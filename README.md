@@ -30,8 +30,6 @@ Live Flock is an educational project aimed at honing our skills in web developme
 ### Prerequisites
 
 - Docker
-- Node.js (for frontend)
-- Java Development Kit (JDK, for backend)
 
 ### Installation
 
