@@ -17,11 +17,11 @@ public class AccountJsonTest {
 
     @Test
     public void accountSerializationTest() throws IOException {
-        Account account = new Account(99L, "xd", "xd.png");
+        Account account = new Account(0L, "xd", "xd.png");
         assertThat(json.write(account)).isStrictlyEqualToJson("expected.json");
         assertThat(json.write(account)).hasJsonPathNumberValue("@.id");
         assertThat(json.write(account)).extractingJsonPathNumberValue("@.id")
-                .isEqualTo(99);
+                .isEqualTo(0);
         assertThat(json.write(account)).hasJsonPathStringValue("@.username");
         assertThat(json.write(account)).extractingJsonPathStringValue("@.username")
                 .isEqualTo("xd");
@@ -34,14 +34,14 @@ public class AccountJsonTest {
     public void accountDeserializationTest() throws IOException {
         String expected = """
            {
-               "id":99,
+               "id":0,
                "username":"xd",
                "avatar":"xd.png"
            }
            """;
         assertThat(json.parse(expected))
-                .isEqualTo(new Account(99L, "xd", "xd.png"));
-        assertThat(json.parseObject(expected).id()).isEqualTo(99);
+                .isEqualTo(new Account(0L, "xd", "xd.png"));
+        assertThat(json.parseObject(expected).id()).isEqualTo(0);
         assertThat(json.parseObject(expected).username()).isEqualTo("xd");
         assertThat(json.parseObject(expected).avatar()).isEqualTo("xd.png");
     }

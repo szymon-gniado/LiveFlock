@@ -20,17 +20,17 @@ class LiveflockApplicationTests {
 	@Test
 	void shouldReturnAccountWhenDataIsSaved() {
 
-    ResponseEntity<String> response = restTemplate.getForEntity("/accounts/1000", String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity("/accounts/0", String.class);
 
-     DocumentContext documentContext = JsonPath.parse(response.getBody());
-     Number id = documentContext.read("$.id");
-     assertThat(id).isEqualTo(99);
+        DocumentContext documentContext = JsonPath.parse(response.getBody());
+        Number id = documentContext.read("$.id");
+        assertThat(id).isEqualTo(0);
 
-     String username = documentContext.read("$.username");
-     assertThat(username).isEqualTo("xd");
+         String username = documentContext.read("$.username");
+         assertThat(username).isEqualTo("xd");
 
-     String avatar = documentContext.read("$.avatar");
-     assertThat(avatar).isEqualTo("xd.png");
+        String avatar = documentContext.read("$.avatar");
+        assertThat(avatar).isEqualTo("xd.png");
 
 	}
 
