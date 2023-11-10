@@ -1,6 +1,6 @@
 - LiveFlock is an social-media application that allows users to pin their posts to a virtual board.
 - In order to create a post users need to create an account, give it a title and write content
-- Users with an account can create boards with by choosing boards (at least one but can be many) to which to pin the post, providing name and description
+- Users with an account can create posts with by choosing boards (at least one but can be many) to which to pin the post, providing name and description
 - Each board must have at least one owner but it also can have many owners. They can exist without posts.
 - There is a main public Board that every Account is associated with upon creation.
 - Each post needs to have one and only one creator account
