@@ -1,3 +1,5 @@
+// Created by Szymon Gniado
+
 package raveneye.liveflock;
 
 import org.springframework.boot.SpringApplication;
