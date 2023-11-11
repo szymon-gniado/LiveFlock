@@ -25,13 +25,11 @@ services:
       retries: 3
   # Include liveflock api image
   api:
-    build:
-      context: ../backend
-      dockerfile: Dockerfile
+    image: tsayero/liveflock-service
     depends_on:
       database:
         condition: service_healthy
-    container_name: liveflock-api
+    container_name: liveflock-service
     ports:
       - 8080:8080
     networks:
@@ -42,7 +40,6 @@ networks:
 volumes:
   # Create named volume - datadir that binds /data directory to MariDB init dir
   datadir:
-    # Since it is most likely the host machine will be an Ubuntu, or it's derivative driver is set to overlay2
     driver: local
     driver_opts:
       type: none
