@@ -44,8 +44,7 @@ Live Flock is an educational project aimed at honing our skills in web developme
    ```shell
    docker-compose up
    
-5. Run the frontend and backend development servers.
-6. Access the application at:
+5. Access the application at:
    
    ```shell
    http://localhost:3000 #for the frontend
