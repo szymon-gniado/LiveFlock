@@ -1,0 +1,46 @@
+# Created by Szymon Gniado
+
+version: "3"
+services:
+  # Include mariadb image
+  database:
+    image: mariadb
+    container_name: liveflock-database
+    # Bind named volume - datadir to docker init directory
+    # This is to make mariadb initialize database from data directory
+    volumes:
+      - datadir:/docker-entrypoint-initdb.d
+    environment:
+      # Make mariadb set random root password
+      - MARIADB_RANDOM_ROOT_PASSWORD=yes
+    ports:
+      - 3306:3306
+    networks:
+      - liveflock
+    healthcheck:
+      test: ["CMD", "mariadb-check", "-u", "liveflock", "--password=xd", "liveflock", "account"]
+      interval: 30s
+      timeout: 10s
+      retries: 9
+  # Include liveflock api image
+  service:
+    image: tsayero/liveflock-service
+    depends_on:
+      database:
+        condition: service_healthy
+    container_name: liveflock-service
+    ports:
+      - 8080:8080
+    networks:
+      - liveflock
+networks:
+  liveflock:
+    driver: bridge
+volumes:
+  # Create named volume - datadir that binds /data directory to MariDB init dir
+  datadir:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: data
