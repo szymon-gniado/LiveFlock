@@ -10,21 +10,20 @@ services:
     # This is to make mariadb initialize database from data directory
     volumes:
       - datadir:/docker-entrypoint-initdb.d
-    # Make mariadb set random root password
     environment:
+      # Make mariadb set random root password
       - MARIADB_RANDOM_ROOT_PASSWORD=yes
-      - MARIADB_USER=liveflock
-      - MARIADB_PASSWORD=xd
-      - MARIADB_DATABASE=liveflock
+    ports:
+      - 3306:3306
     networks:
       - liveflock
     healthcheck:
       test: ["CMD", "mariadb-check", "-u", "liveflock", "--password=xd", "liveflock", "account"]
-      interval: 1m30s
+      interval: 30s
       timeout: 10s
-      retries: 3
+      retries: 9
   # Include liveflock api image
-  api:
+  service:
     image: tsayero/liveflock-service
     depends_on:
       database:

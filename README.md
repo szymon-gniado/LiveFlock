@@ -36,7 +36,7 @@ Live Flock is an educational project aimed at honing our skills in web developme
 1. Clone the repository:
    
    ```shell
-   git clone https://github.com/your-username/live-flock.git
+   git clone https://github.com/your-username/live-flock.git \
    cd live-flock
    
 3. Set up Docker containers:
