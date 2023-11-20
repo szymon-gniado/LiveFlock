@@ -1,7 +1,7 @@
-backend/.gradle/
-backend/.idea/
-backend/HELP.md
-backend/build/
+service/.gradle/
+service/.idea/
+service/HELP.md
+service/build/
 database/.dbeaver
 knowledge-base
 .idea
