@@ -1,6 +1,6 @@
 # Live Flock (work in progreess)
 
-Live Flock is an educational project aimed at honing our skills in web development using Next.js, implementing RESTful APIs with Spring and connecting it with relational database. In this project, we create a social media and streaming platform.
+Live Flock is an educational project aimed at honing omy skills in web development using Next.js, implementing RESTful APIs with Spring and connecting it with relational database. In this project, I create a social media and streaming platform.
 
 ## Project Overview
 
@@ -57,8 +57,8 @@ Live Flock is an educational project aimed at honing our skills in web developme
 
 This project was developed and is maintained by the following contributors:
 
-- [Szymon Gniado](https://github.com/szymon-gnado) & [Karol Muziński](https://github.com/ViniestPlane76) - Project Lead
-- [Karol Muziński](https://github.com/ViniestPlane76) - Frontend Developer
+- [Szymon Gniado](https://github.com/szymon-gnado) - Project Lead
+- [Szymon Gniado](https://github.com/szymon-gnado) - Frontend Developer
 - [Szymon Gniado](https://github.com/szymon-gnado) - Backend Developer
 - [Szymon Gniado](https://github.com/szymon-gnado)- Database Administrator
 
