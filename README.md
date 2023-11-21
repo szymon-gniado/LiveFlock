@@ -54,7 +54,7 @@ This project was developed and is maintained by the following contributors:
 - [Szymon Gniado](https://github.com/szymon-gnado) - Project Lead
 - [Szymon Gniado](https://github.com/szymon-gnado) - Frontend Developer
 - [Szymon Gniado](https://github.com/szymon-gnado) - Backend Developer
-- [Szymon Gniado](https://github.com/szymon-gnado) - Database Administrator
+- [Szymon Gniado](https://github.com/szymon-gnado) - Database Architect
 
 I would like to thank all the individuals who have contributed to this project.
 
