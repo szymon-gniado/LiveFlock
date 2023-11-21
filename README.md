@@ -1,29 +1,23 @@
 # Live Flock (work in progreess)
 
-Live Flock is an educational project aimed at honing my skills in web development using Next.js, implementing RESTful APIs with Spring and connecting it with relational database. In this project, I create a social media and streaming platform.
+Live Flock is an educational project aimed at honing my skills in web development using React, implementing RESTful APIs with Spring and connecting it with relational database. In this project, I create a social media platform.
 
 ## Project Overview
 
 ### Features
 
-- ~~**Social Media**: Create and share your thoughts, connect with friends, and follow interesting accounts.~~ **(WiP)**
-- ~~**Live Streaming**: Broadcast your content in real-time and engage with your audience.~~ **(WiP)**
-- ~~**User Authentication**: Secure user registration and login system.~~ **(WiP)**
-- ~~**Real-time Interaction**: Interact with users through chat and comments.~~ **(WiP)**
-- ~~**Customization**: Personalize your profile, follow your interests, and discover new content.~~ **(WiP)**
+- Comming soon.
 
 ### Learning Objectives
 
-- **Web Development**: Build the frontend using Next.js, a React framework, and the backend using Java and the Spring framework.
+- **Web Development**: Build the client using React, and the API service using Spring Boot.
 - **Containerization**: Gain hands-on experience with Docker, containerization, and orchestration to ensure smooth deployment and scaling.
-- **RESTful API**: Create a robust RESTful API for communication between the frontend and backend components.
-- **Database Management**: Learn how to set up, configure, and manage a relational database (MariaDB or PostgreSQL).
+- **RESTful API**: Create a robust RESTful API for communication between the client and service components.
+- **Database Management**: Learn how to set up, configure, and manage a relational database using MariaDB.
 - **React**: Learn React, a popular library for building user interfaces.
 - **Spring**: Master the Spring framework, a key tool for creating Java-based web applications.
-- **Next.js**: Explore Next.js, a framework for React that enables server-side rendering.
 - **JavaScript**: Develop skills in JavaScript, the programming language that powers web development.
 - **Java**: Gain proficiency in Java, a versatile programming language used in backend development.
-- **MVC**: Develop the project with a well-structured Model-View-Controller (MVC) design pattern for clean separation of concerns.
 
 ## Getting Started
 
