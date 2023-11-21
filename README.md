@@ -1,6 +1,6 @@
 # Live Flock (work in progreess)
 
-Live Flock is an educational project aimed at honing omy skills in web development using Next.js, implementing RESTful APIs with Spring and connecting it with relational database. In this project, I create a social media and streaming platform.
+Live Flock is an educational project aimed at honing my skills in web development using Next.js, implementing RESTful APIs with Spring and connecting it with relational database. In this project, I create a social media and streaming platform.
 
 ## Project Overview
 
@@ -37,7 +37,7 @@ Live Flock is an educational project aimed at honing omy skills in web developme
    
    ```shell
    git clone git@github.com:szymon-gniado/live-flock.git
-   cd live-flock/docker
+   cd live-flock
    
 3. Set up Docker containers:
    
@@ -47,11 +47,11 @@ Live Flock is an educational project aimed at honing omy skills in web developme
 5. Access the application at:
    
    ```shell
-   http://localhost:3000 #for the frontend
+   http://localhost:3000 #for the client
    ```
 
    ```shell
-   http://localhost:8080 #for the API.
+   http://localhost:8080 #for the API service.
 
 ## Authors
 
@@ -62,7 +62,7 @@ This project was developed and is maintained by the following contributors:
 - [Szymon Gniado](https://github.com/szymon-gnado) - Backend Developer
 - [Szymon Gniado](https://github.com/szymon-gnado)- Database Administrator
 
-We would like to thank all the individuals who have contributed to this project.
+I would like to thank all the individuals who have contributed to this project.
 
 If you'd like to contribute to this project, please see the [Contributing Guidelines](CONTRIBUTING.md).
 
