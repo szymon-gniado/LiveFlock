@@ -4,7 +4,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import raveneye.liveflock.repository.AccountRepository;
-import raveneye.liveflock.entity.Account;
 
 import java.net.URI;
 import java.util.Optional;
@@ -19,17 +18,17 @@ public class AccountController {
   }
 
   @GetMapping("/{username}")
-  public ResponseEntity<Account> findById(@PathVariable String username) {
-    Optional<Account> accountOptional = accountRepository.findAccountViewBy(username);
+  public ResponseEntity<raveneye.liveflock.entity.Account> findById(@PathVariable String username) {
+    Optional<raveneye.liveflock.entity.Account> accountOptional = accountRepository.findAccountViewBy(username);
     return accountOptional.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
   }
 
   @PostMapping
-  public ResponseEntity<Void> createAccount(@RequestBody Account newAccount, UriComponentsBuilder ucb) {
-    Account savedAccount = accountRepository.save(newAccount);
+  public ResponseEntity<Void> createAccount(@RequestBody raveneye.liveflock.entity.Account newAccount, UriComponentsBuilder ucb) {
+    raveneye.liveflock.entity.Account savedAccount = accountRepository.save(newAccount);
     URI locationOfNewAccount = ucb
-            .path("/accounts/{id}")
-            .buildAndExpand(savedAccount.id())
+            .path("/accounts/{username}")
+            .buildAndExpand(savedAccount.username())
             .toUri();
     return ResponseEntity.created(locationOfNewAccount).build();
   }
