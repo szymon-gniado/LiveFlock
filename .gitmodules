@@ -1,0 +1,6 @@
+[submodule "service"]
+	path = service
+	url = git@github.com:szymon-gniado/liveflock-service.git
+[submodule "client"]
+	path = client
+	url = git@github.com:szymon-gniado/liveflock-client.git
