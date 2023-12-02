@@ -39,8 +39,5 @@ networks:
 volumes:
   # Create named volume - datadir that binds /data directory to MariDB init dir
   datadir:
-    driver: local
     driver_opts:
-      type: none
-      o: bind
-      device: data
+      device: database
