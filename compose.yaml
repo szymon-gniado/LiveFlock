@@ -8,11 +8,18 @@ services:
     container_name: liveflock-database
     # Bind named volume - datadir to docker init directory
     # This is to make mariadb initialize database from data directory
-    volumes:
-      - datadir:/docker-entrypoint-initdb.d
+    # volumes:
+    #   - datadir:/docker-entrypoint-initdb.d
     environment:
-      # Make mariadb set random root password
-      - MARIADB_RANDOM_ROOT_PASSWORD=yes
+      MARIADB_RANDOM_ROOT_PASSWORD: /run/secrets/root_password
+      MARIADB_DATABASE: /run/secrets/database_name
+      MARIADB_USER: /run/secrets/username
+      MARIADB_PASSWORD: /run/secrets/user_password
+    secrets:
+      - root_password
+      - database_name
+      - username
+      - user_password
     ports:
       - 3306:3306
     networks:
@@ -36,8 +43,17 @@ services:
 networks:
   liveflock:
     driver: bridge
-volumes:
-  # Create named volume - datadir that binds /data directory to MariDB init dir
-  datadir:
-    driver_opts:
-      device: database
+# volumes:
+#   # Create named volume - datadir that binds /data directory to MariDB init dir
+#   datadir:
+#     driver_opts:
+#       device: database
+secrets:
+  root_password:
+    file: ./root_password.txt
+  database_name:
+    file: ./database_name.txt
+  username:
+    file: ./username.txt
+  user_password:
+    file: ./user_password.txt

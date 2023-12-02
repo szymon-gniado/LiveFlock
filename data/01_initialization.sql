@@ -1,8 +1,5 @@
 create database liveflock;
 
-create user 'liveflock'@'%' identified by 'xd';
-grant all privileges on liveflock.* TO 'liveflock'@'%';
-
 use liveflock;
 
 create or replace table account
