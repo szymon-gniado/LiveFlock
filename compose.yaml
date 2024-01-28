@@ -9,8 +9,8 @@ services:
     # Bind named volume - datadir to docker init directory
     # This is to make mariadb initialize database from data directory
     volumes:
-       - ./database:/docker-entrypoint-initdb.d
-       - ./data:/var/lib/mysql:Z
+      - ./database:/docker-entrypoint-initdb.d
+      - ./data:/var/lib/mysql:Z
     environment:
       - MARIADB_RANDOM_ROOT_PASSWORD=yes
       - MARIADB_DATABASE_FILE=/run/secrets/database
@@ -21,8 +21,6 @@ services:
       - database
       - username
       - password
-    networks:
-      - liveflock
     healthcheck:
       test: ["CMD", "mariadb-check", "-u", "liveflock", "--password=xd", "liveflock", "account"]
       interval: 30s
@@ -37,14 +35,10 @@ services:
       database:
         condition: service_healthy
     container_name: liveflock-service
-    networks:
-      - liveflock
   client:
     build:
       context: ./client
     image: liveflock-client:latest
-    networks:
-      - liveflock
     ports:
       - 3000:3000
 networks:
