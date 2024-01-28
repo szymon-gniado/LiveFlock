@@ -1,24 +1,17 @@
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository and compose:
    
    ```shell
    git clone --recursive git@github.com:szymon-gniado/live-flock.git
    cd live-flock
-   
-3. Set up Docker containers:
-   
-   ```shell
    docker-compose up
    
 5. Access the application at:
    
    ```shell
-   http://localhost:3000 #for the client
+   http://localhost:3000
    ```
-
-   ```shell
-   http://localhost:8080 #for the API service.
 
 ## Authors
 
