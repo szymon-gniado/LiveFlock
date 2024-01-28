@@ -7,7 +7,7 @@ import Account from "./components/Account";
 function Application() {
     return (
         <>
-            <Account account_username={user1} />
+            <Account account_username="user1" />
         </>
     );
 }

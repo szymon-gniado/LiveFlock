@@ -2,7 +2,7 @@ import useFetch from "../hooks/useFetch";
 
 function Account({account_username = ""}) {
 
-    const [status, error, account] = useFetch("http://liveflock-service/accounts/" + account_username);
+    const [status, error, account] = useFetch("https://liveflock-service:8080/accounts/" + account_username);
     const {id, email, username, password, display_name, creation_date, avatar} = account;
     const body = (
         <ul>
