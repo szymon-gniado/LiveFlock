@@ -3,7 +3,7 @@
 1. Clone the repository:
    
    ```shell
-   git clone git@github.com:szymon-gniado/live-flock.git
+   git clone --recursive git@github.com:szymon-gniado/live-flock.git
    cd live-flock
    
 3. Set up Docker containers:
