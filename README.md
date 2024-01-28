@@ -20,7 +20,6 @@
    ```shell
    http://localhost:8080 #for the API service.
 
-
 ## Authors
 
 [Szymon Gniado](https://github.com/szymon-gnado)
