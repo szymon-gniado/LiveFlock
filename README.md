@@ -3,7 +3,7 @@
 1. Clone the repository and compose:
    
    ```shell
-   git clone --recursive git@github.com:szymon-gniado/live-flock.git
+   git clone git@github.com:szymon-gniado/live-flock.git
    cd live-flock
    docker-compose up
    
