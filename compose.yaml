@@ -8,52 +8,54 @@ services:
     container_name: liveflock-database
     # Bind named volume - datadir to docker init directory
     # This is to make mariadb initialize database from data directory
-    # volumes:
-    #   - datadir:/docker-entrypoint-initdb.d
+    volumes:
+       - ./database:/docker-entrypoint-initdb.d
+       - ./data:/var/lib/mysql:Z
     environment:
-      MARIADB_RANDOM_ROOT_PASSWORD: /run/secrets/root_password
-      MARIADB_DATABASE: /run/secrets/database_name
-      MARIADB_USER: /run/secrets/username
-      MARIADB_PASSWORD: /run/secrets/user_password
+      - MARIADB_RANDOM_ROOT_PASSWORD=yes
+      - MARIADB_DATABASE_FILE=/run/secrets/database
+      - MARIADB_USER_FILE=/run/secrets/username
+      - MARIADB_PASSWORD_FILE=/run/secrets/password
     secrets:
       - root_password
-      - database_name
+      - database
       - username
-      - user_password
-    ports:
-      - 3306:3306
+      - password
     networks:
       - liveflock
     healthcheck:
-      test: ["CMD", "mariadb-check", "-u", "liveflock", "--password=xd", "liveflock", "account"]
-      interval: 30s
-      timeout: 10s
+      test: ["CMD", "healthcheck.sh", "--su-mysql", "--connect", "--innodb_initialized"]
+      interval: 3s
+      timeout: 1s
       retries: 9
   # Include liveflock api image
   service:
-    image: tsayero/liveflock-service
+    build:
+      context: ./service
+    image: liveflock-service:latest
     depends_on:
       database:
         condition: service_healthy
     container_name: liveflock-service
-    ports:
-      - 8080:8080
     networks:
       - liveflock
+  client:
+    build:
+      context: ./client
+    image: liveflock-client:latest
+    networks:
+      - liveflock
+    ports:
+      - 3000:3000
 networks:
   liveflock:
     driver: bridge
-# volumes:
-#   # Create named volume - datadir that binds /data directory to MariDB init dir
-#   datadir:
-#     driver_opts:
-#       device: database
 secrets:
   root_password:
     file: ./root_password.txt
-  database_name:
-    file: ./database_name.txt
+  database:
+    file: ./database.txt
   username:
     file: ./username.txt
-  user_password:
-    file: ./user_password.txt
+  password:
+    file: ./password.txt
