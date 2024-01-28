@@ -1,5 +1,3 @@
-create database liveflock;
-
 use liveflock;
 
 create or replace table account
