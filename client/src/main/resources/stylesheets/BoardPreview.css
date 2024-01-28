@@ -1,0 +1,37 @@
+article {
+    width: 260px;
+    height: 406px;
+    padding: 12px;
+    margin: 12px;
+    background-color: #06061F;
+    border: 2px solid #1f1f3d;
+    border-radius: 6px;
+    color: #fffdfb;
+    text-align: center;
+}
+
+.meta-item {
+    padding: 3px;
+}
+
+.board-image {
+    border: 2px solid #D6FF00;
+    border-radius: 50%;
+}
+
+.join-button {
+    width: 88px;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: #EEF0F1;
+    border-radius: 6px;
+    border: 2px solid #EEF0F1;
+    font-weight: bold;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #101E27;
+    color: #fffdfb;
+}

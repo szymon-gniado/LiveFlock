@@ -1,0 +1,7 @@
+.boards-grid {
+    width: 936px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+}

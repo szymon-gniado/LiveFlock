@@ -1,0 +1,18 @@
+.post-preview {
+    width: 576px;
+    max-height: 288px;
+    margin: auto;
+    padding: 6px 48px 6px 48px;
+    background-color: #06061F;
+    color: white;
+    border: 2px solid #1f1f3d;
+    border-radius: 12px;
+}
+
+.post-links {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
