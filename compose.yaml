@@ -35,6 +35,8 @@ services:
       database:
         condition: service_healthy
     container_name: liveflock-service
+    ports:
+      - 8080:8080
   client:
     build:
       context: ./client

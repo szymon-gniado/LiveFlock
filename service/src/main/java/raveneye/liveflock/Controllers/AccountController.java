@@ -10,7 +10,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/accounts")
-@CrossOrigin(origins = "http://live-flock-client-1:3000")
 public class AccountController {
   private final AccountRepository accountRepository;
 
