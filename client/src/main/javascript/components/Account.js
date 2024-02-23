@@ -1,30 +1,61 @@
 import useFetch from "../hooks/useFetch";
+import React, {useState} from "react";
+import UseFetch from "../hooks/useFetch";
 
-function Account({account_username = ""}) {
+function Account() {
 
-    const [status, error, account] = useFetch("http://localhost:8080/accounts/" + account_username);
-    const {id, email, username, password, display_name, creation_date, avatar} = account;
-    const body = (
-        <ul>
-            <li>id: {id}</li>
-            <li>email: {email}</li>
-            <li>username: {username}</li>
-            <li>password: {password}</li>
-            <li>display name: {display_name}</li>
-            <li>creation date: {creation_date}</li>
-            <li>avatar: {avatar}</li>
-        </ul>
+    const [formData, setFormData] = useState({
+        username: '',
+    });
+    const [status, error, accounts] = useFetch("http://localhost:8080/accounts");
+
+    const handleChange = (e) => {
+        const { username, value } = e.target;
+        setFormData({username: value });
+    };
+
+    // Handler function to submit form data
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Send form data to the server using fetch or any other method
+        fetch('http://localhost:8080/accounts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Form submitted successfully');
+                    setFormData({ username: '' });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+            });
+    };
+
+    return (
+        <>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Add new user:
+                    <input type="text" name="name" value={formData.username} onChange={handleChange}/>
+                </label>
+                <button type="submit">Add</button>
+            </form>
+            List of users:
+            <ul>
+                {status === 'loading' && <p>Loading...</p>}
+                {status === 'error' && <p>Error: {error}</p>}
+                {Array.isArray(accounts) && accounts.map((account) => (<li key={account.id}>{account.username}</li>))}
+            </ul>
+        </>
     )
-    switch (status) {
-        case "pending":
-            return <p>Loading...</p>;
-        case "ok":
-            return body;
-        case "error":
-            return <p>{error.toString()}</p>;
-        default:
-            return <p>404 Page Not Found</p>
-    }
+
 
 }
 

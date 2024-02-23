@@ -19,6 +19,11 @@ const useFetch = (url) => {
     useEffect(() => {
         getAccount(url);
     }, [url]);
+
+    const refetchData = () => {
+        getAccount(url);
+    };
+
     return [status, error, data];
 }
 
