@@ -16,7 +16,7 @@
    http://localhost:3000
    ```
 ## Features
- 1. User can be added by entering a username into input field and submiting form.
+ 1. User can be added by entering a username into input field and submiting the form.
  2. After user is added you can refresh the page to see it appear on the users' list
 
 ## Authors
