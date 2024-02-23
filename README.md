@@ -15,7 +15,7 @@
    ```shell
    http://localhost:3000
    ```
-## Usage
+## Features
  1. User can be added by entering a username into input field and submiting form.
  2. After user is added you can refresh the page to see it appear on the users' list
 
